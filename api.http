@@ -20,3 +20,13 @@ Content-Type: application/json
   ],
   "rate": 8
 }
+
+### Update a movie partially
+PATCH http://localhost:1234/movies/4657c0dc-0c52-477d-9bef-4250068394c6
+Content-Type: application/json
+
+{
+  "year": 2010,
+  "duration": 190,
+  "director": "James Cameron"
+}
