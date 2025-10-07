@@ -16,6 +16,15 @@ app.get('/movies', (req, res) => {
   res.json({ movies })
 })
 
+app.get('/movies/:id', (req, res) => { // path-to-regex
+  const { id } = req.params
+  const movie = movies.find(movie => movie.id === id)
+
+  if (movie) return res.json(movie)
+
+  res.status(404).json({ message: 'Message not found' })
+})
+
 const PORT = process.env.PORT ?? 1234
 app.listen(PORT, () => {
   console.log(`Server listening on port http://localhost:${PORT}`)
