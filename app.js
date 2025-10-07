@@ -26,7 +26,7 @@ app.get('/movies', (req, res) => {
     )
     return res.json(filteredMovies)
   }
-  res.json({ movies })
+  res.json(movies)
 })
 
 app.get('/movies/:id', (req, res) => { // path-to-regex
