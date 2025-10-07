@@ -3,3 +3,20 @@ GET http://localhost:1234/movies
 
 ### Get movie by ID
 GET http://localhost:1234/movies/6a360a18-c645-4b47-9a7b-2a71babbf3e0
+
+### Create movie
+POST http://localhost:1234/movies
+Content-Type: application/json
+
+{
+  "title": "Avatares",
+  "year": 2005,
+  "director": "Cameron James",
+  "duration": 172,
+  "poster": "https://i.etsystatic.com/35681979/r/il/dfe3ba/3957859451/il_fullxfull.3957859451_h27r.jpg",
+  "genre": [
+    "Action",
+    "Fantasy"
+  ],
+  "rate": 8
+}
