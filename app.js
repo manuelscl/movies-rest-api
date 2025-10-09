@@ -12,7 +12,8 @@ app.use(cors({
       'http://localhost:1234',
       'http://localhost:8080',
       'http://movies.com',
-      'http://manuelscl.com'
+      'http://manuelscl.com',
+      'https://movies-rest-api.up.railway.app/movies'
     ]
 
     if (ACCEPTED_ORIGINS.includes(origin) || !origin) {

@@ -16,7 +16,7 @@
     }
   </style>
   <script type="module">
-    fetch('http://localhost:1234/movies')
+    fetch('https://movies-rest-api.up.railway.app/movies')
     .then(res => res.json())
     .then(movies => {
       console.log(movies);
@@ -39,7 +39,7 @@
           const article = e.target.closest('article')
           const id = article.dataset.id
 
-          fetch(`http://localhost:1234/movies/${id}`, {
+          fetch(`https://movies-rest-api.up.railway.app/movies/${id}`, {
             method: 'DELETE'
           })
           .then(res => {
